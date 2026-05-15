@@ -19,7 +19,7 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Alex Chen — Flutter Developer',
+      title: 'Bharat Wakade — Flutter Developer',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
       home: const PortfolioPage(),
@@ -179,7 +179,7 @@ class _BackToTopButtonState extends State<_BackToTopButton> {
               borderRadius: BorderRadius.circular(14),
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.primary.withOpacity(0.3),
+                  color: AppColors.primary.withValues(alpha: 0.3),
                   blurRadius: 16,
                   offset: const Offset(0, 6),
                 ),

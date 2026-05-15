@@ -1,6 +1,7 @@
 // lib/widgets/projects_section.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../theme/app_theme.dart';
 import '../data/portfolio_data.dart';
 import 'section_header.dart';
@@ -14,7 +15,7 @@ class ProjectsSection extends StatefulWidget {
 
 class _ProjectsSectionState extends State<ProjectsSection> {
   String _activeFilter = 'All';
-  final List<String> _filters = ['All', 'Featured', 'Mobile App', 'Finance', 'Social', 'Health & Fitness', 'Web3', 'Healthcare'];
+  final List<String> _filters = ['All', 'Featured', 'EdTech', 'Enterprise', 'On-Demand Services', 'Automotive', 'Social'];
 
   List<Map<String, dynamic>> get _filteredProjects {
     if (_activeFilter == 'All') return PortfolioData.projects;
@@ -302,13 +303,14 @@ class _ProjectCardState extends State<_ProjectCard> {
                     // Action buttons
                     Row(
                       children: [
-                        _ActionLink(
-                          icon: Icons.code_rounded,
-                          label: 'GitHub',
-                          url: widget.project['github'],
-                          color: Color(gradient[0] as int),
-                        ),
-                        if (widget.project['live'] != null) ...[
+                        if (widget.project['github'] != null && (widget.project['github'] as String).isNotEmpty)
+                          _ActionLink(
+                            icon: Icons.code_rounded,
+                            label: 'GitHub',
+                            url: widget.project['github'],
+                            color: Color(gradient[0] as int),
+                          ),
+                        if (widget.project['live'] != null && (widget.project['live'] as String).isNotEmpty) ...[
                           const SizedBox(width: 12),
                           _ActionLink(
                             icon: Icons.open_in_new_rounded,
@@ -336,7 +338,7 @@ class _ProjectCardState extends State<_ProjectCard> {
   }
 }
 
-class _ActionLink extends StatelessWidget {
+class _ActionLink extends StatefulWidget {
   final IconData icon;
   final String label;
   final String? url;
@@ -350,21 +352,56 @@ class _ActionLink extends StatelessWidget {
   });
 
   @override
+  State<_ActionLink> createState() => _ActionLinkState();
+}
+
+class _ActionLinkState extends State<_ActionLink> {
+  bool _hovered = false;
+
+  Future<void> _launch() async {
+    final url = widget.url;
+    if (url == null || url.isEmpty) return;
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(icon, size: 14, color: color),
-        const SizedBox(width: 4),
-        Text(
-          label,
-          style: TextStyle(
-            color: color,
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      onEnter: (_) => setState(() => _hovered = true),
+      onExit: (_) => setState(() => _hovered = false),
+      child: GestureDetector(
+        onTap: _launch,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 150),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+          decoration: BoxDecoration(
+            color: _hovered ? widget.color.withOpacity(0.12) : Colors.transparent,
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: _hovered ? widget.color.withOpacity(0.5) : widget.color.withOpacity(0.25),
+            ),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(widget.icon, size: 13, color: widget.color),
+              const SizedBox(width: 5),
+              Text(
+                widget.label,
+                style: TextStyle(
+                  color: widget.color,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
           ),
         ),
-      ],
+      ),
     );
   }
 }

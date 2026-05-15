@@ -132,16 +132,16 @@ class _ContactSectionState extends State<ContactSection> {
           ),
           const SizedBox(height: 16),
           _ContactItem(
-            icon: Icons.location_on_outlined,
-            label: 'Location',
-            value: 'San Francisco, CA (Remote OK)',
-            onTap: null,
+            icon: Icons.phone_outlined,
+            label: 'Phone',
+            value: PortfolioData.phone,
+            onTap: () => launchUrl(Uri.parse('tel:${PortfolioData.phone}')),
           ),
           const SizedBox(height: 16),
           _ContactItem(
-            icon: Icons.access_time_outlined,
-            label: 'Response Time',
-            value: 'Within 24 hours',
+            icon: Icons.location_on_outlined,
+            label: 'Location',
+            value: 'Nagpur, Maharashtra, India',
             onTap: null,
           ),
         ],
@@ -173,12 +173,6 @@ class _ContactSectionState extends State<ContactSection> {
               label: 'LinkedIn',
               url: PortfolioData.linkedin,
               color: const Color(0xFF0077B5),
-            ),
-            _SocialButton(
-              icon: '🐦',
-              label: 'Twitter',
-              url: PortfolioData.twitter,
-              color: const Color(0xFF1DA1F2),
             ),
           ],
         ).animate().fadeIn(delay: 600.ms),
@@ -345,7 +339,7 @@ class _ContactSectionState extends State<ContactSection> {
               colors: [AppColors.primary, AppColors.secondary],
             ).createShader(bounds),
             child: const Text(
-              'Alex Chen',
+              'Bharat Wakade',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
@@ -355,7 +349,7 @@ class _ContactSectionState extends State<ContactSection> {
           ),
           const SizedBox(height: 8),
           Text(
-            '© 2024 Alex Chen · Flutter Developer · Built with ❤️ in Flutter',
+            '© 2025 Bharat Wakade · Flutter Developer · Built with ❤️ in Flutter',
             style: const TextStyle(
               color: AppColors.textMuted,
               fontSize: 13,

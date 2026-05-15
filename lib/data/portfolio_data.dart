@@ -1,53 +1,66 @@
 // lib/data/portfolio_data.dart
 
 class PortfolioData {
-  static const String name = 'Alex Chen';
+  static const String name = 'Bharat Wakade';
   static const String tagline = 'Flutter Developer';
   static const List<String> roles = [
     'Flutter Developer',
     'Mobile App Engineer',
     'Cross-Platform Specialist',
-    'UI/UX Enthusiast',
-    'Dart Wizard',
+    'Bloc & Riverpod Expert',
+    'Clean Architecture Advocate',
   ];
   static const String bio =
-      'Passionate Flutter developer with 4+ years of experience crafting beautiful, '
-      'performant cross-platform applications. I specialize in building pixel-perfect '
-      'UIs with smooth animations, clean architecture, and scalable state management. '
-      'When I\'m not writing Dart code, I\'m exploring new Flutter packages, '
-      'contributing to open source, or creating content about mobile development.';
+      'Proficient Flutter developer with hands-on experience building '
+      'user-friendly cross-platform applications for Android and iOS. '
+      'Skilled across the full app development lifecycle — from concept to '
+      'deployment — with expertise in Bloc/Cubit, Riverpod, Firebase, '
+      'Google Maps, WebSockets, and RESTful API integration. '
+      'Passionate about clean architecture, scalable codebases, and '
+      'delivering seamless user experiences.';
 
-  static const String email = 'alex.chen@flutter.dev';
-  static const String github = 'https://github.com/alexchen';
-  static const String linkedin = 'https://linkedin.com/in/alexchen';
-  static const String twitter = 'https://twitter.com/alexchen_dev';
+  static const String email = 'bharatwakade012@gmail.com';
+  static const String phone = '+91 7020541621';
+  static const String github = 'https://github.com/BharatWakade-code/';
+  static const String linkedin =
+      'https://www.linkedin.com/in/bharat-wakade-8b8007245/';
+  static const String twitter = '';
 
   static const List<Map<String, dynamic>> skills = [
     {
-      'category': 'Core',
+      'category': 'Flutter & Dart',
       'items': [
         {'name': 'Flutter', 'level': 0.95, 'icon': '🐦'},
         {'name': 'Dart', 'level': 0.95, 'icon': '🎯'},
-        {'name': 'State Management', 'level': 0.90, 'icon': '⚡'},
-        {'name': 'UI/UX Design', 'level': 0.85, 'icon': '🎨'},
+        {'name': 'Bloc / Cubit', 'level': 0.92, 'icon': '⚡'},
+        {'name': 'Riverpod', 'level': 0.88, 'icon': '🔵'},
       ]
     },
     {
       'category': 'Backend & Services',
       'items': [
-        {'name': 'Firebase', 'level': 0.88, 'icon': '🔥'},
-        {'name': 'REST APIs', 'level': 0.90, 'icon': '🌐'},
-        {'name': 'GraphQL', 'level': 0.75, 'icon': '📡'},
-        {'name': 'Supabase', 'level': 0.80, 'icon': '⚡'},
+        {'name': 'Firebase', 'level': 0.90, 'icon': '🔥'},
+        {'name': 'REST APIs', 'level': 0.92, 'icon': '🌐'},
+        {'name': 'WebSocket', 'level': 0.82, 'icon': '📡'},
+        {'name': 'Google Maps SDK', 'level': 0.85, 'icon': '🗺️'},
       ]
     },
     {
       'category': 'Tools & Practices',
       'items': [
-        {'name': 'Git & GitHub', 'level': 0.92, 'icon': '🐙'},
-        {'name': 'CI/CD', 'level': 0.80, 'icon': '🔄'},
-        {'name': 'Testing', 'level': 0.85, 'icon': '✅'},
-        {'name': 'Clean Architecture', 'level': 0.88, 'icon': '🏗️'},
+        {'name': 'Clean Architecture', 'level': 0.90, 'icon': '🏗️'},
+        {'name': 'Git & GitHub', 'level': 0.90, 'icon': '🐙'},
+        {'name': 'Postman', 'level': 0.85, 'icon': '🛠️'},
+        {'name': 'PostHog Analytics', 'level': 0.78, 'icon': '📊'},
+      ]
+    },
+    {
+      'category': 'Deployment & Cloud',
+      'items': [
+        {'name': 'Play Store', 'level': 0.90, 'icon': '▶️'},
+        {'name': 'App Store', 'level': 0.85, 'icon': '🍎'},
+        {'name': 'AWS (EC2, S3, Lambda)', 'level': 0.75, 'icon': '☁️'},
+        {'name': 'Firebase App Distribution', 'level': 0.88, 'icon': '🚀'},
       ]
     },
   ];
@@ -56,141 +69,142 @@ class PortfolioData {
     {'name': 'Flutter', 'color': 0xFF54C5F8},
     {'name': 'Dart', 'color': 0xFF00B4AB},
     {'name': 'Firebase', 'color': 0xFFFFCA28},
+    {'name': 'Bloc/Cubit', 'color': 0xFF7B2FBE},
     {'name': 'Riverpod', 'color': 0xFF00D4FF},
-    {'name': 'BLoC', 'color': 0xFF7B2FBE},
-    {'name': 'GetX', 'color': 0xFF4CAF50},
-    {'name': 'Supabase', 'color': 0xFF3ECF8E},
+    {'name': 'WebSocket', 'color': 0xFF4CAF50},
+    {'name': 'Google Maps', 'color': 0xFF4285F4},
     {'name': 'REST API', 'color': 0xFFFF6B6B},
-    {'name': 'GraphQL', 'color': 0xFFE535AB},
+    {'name': 'PostHog', 'color': 0xFFF54E00},
     {'name': 'Git', 'color': 0xFFF05032},
-    {'name': 'Figma', 'color': 0xFFA259FF},
-    {'name': 'VS Code', 'color': 0xFF007ACC},
+    {'name': 'AWS', 'color': 0xFFFF9900},
+    {'name': 'OneSignal', 'color': 0xFFE54B4D},
   ];
 
   static const List<Map<String, dynamic>> projects = [
     {
-      'title': 'EcoTrack',
+      'title': 'OwnPrep',
       'description':
-          'A beautiful sustainability app helping users track their carbon footprint with gorgeous data visualizations, gamification, and AI-powered insights.',
-      'tech': ['Flutter', 'Firebase', 'Riverpod', 'ML Kit'],
-      'category': 'Mobile App',
+          'A student-focused mobile platform providing a unified space for learning and career preparation. Features a job portal, wishlist management, quizzes, tests, educational videos, and a rich Learn Module with practice exercises.',
+      'tech': ['Flutter', 'Firebase', 'Bloc Cubit', 'PostHog', 'REST API'],
+      'category': 'EdTech',
       'gradient': [0xFF00D4FF, 0xFF0066FF],
-      'emoji': '🌿',
-      'github': 'https://github.com/alexchen/ecotrack',
-      'live': 'https://ecotrack.app',
+      'emoji': '🎓',
+      'github': '',
+      'live': 'https://play.google.com/store/apps/details?id=com.ownprep',
       'featured': true,
     },
     {
-      'title': 'FinFlow',
+      'title': 'Petrolynk',
       'description':
-          'Personal finance management app with real-time bank sync, intelligent categorization, budgeting tools, and beautiful chart analytics.',
-      'tech': ['Flutter', 'Supabase', 'BLoC', 'Plaid API'],
-      'category': 'Finance',
-      'gradient': [0xFF4CAF50, 0xFF087F23],
-      'emoji': '💰',
-      'github': 'https://github.com/alexchen/finflow',
-      'live': null,
+          'Cross-platform app for fuel and grocery corporations with daily/monthly/yearly sales dashboards, barcode scanning for inventory, and an AI-powered chatbot over WebSocket for querying business insights.',
+      'tech': [
+        'Flutter',
+        'Firebase',
+        'Bloc Cubit',
+        'WebSocket',
+        'barcode_scanner',
+        'REST API'
+      ],
+      'category': 'Enterprise',
+      'gradient': [0xFFFF9900, 0xFFFF6B35],
+      'emoji': '⛽',
+      'github': '',
+      'live': 'https://petrolynks.com/',
       'featured': true,
     },
     {
-      'title': 'ChatSphere',
+      'title': 'ShineOnCar',
       'description':
-          'Real-time messaging platform with end-to-end encryption, voice messages, group chats, and beautiful animated UI components.',
-      'tech': ['Flutter', 'Firebase', 'WebRTC', 'GetX'],
+          'Dual-app solution: one for car owners to book washing services and another for washers to manage requests. Real-time washer dashboard via WebSocket; first-to-accept booking assignment system.',
+      'tech': ['Flutter', 'Firebase', 'WebSocket', 'Bloc Cubit'],
+      'category': 'On-Demand Services',
+      'gradient': [0xFF4CAF50, 0xFF00BCD4],
+      'emoji': '🚗',
+      'github': '',
+      'live': 'https://apps.apple.com/in/app/shineoncar/id6754560463',
+      'featured': true,
+    },
+    {
+      'title': 'MERSI',
+      'description':
+          'Emergency roadside assistance app for breakdowns and accidents. Integrates Google Maps to display nearby service centers, mechanics, and tow trucks, with OneSignal real-time notifications for service updates.',
+      'tech': [
+        'Flutter',
+        'REST API',
+        'Bloc Cubit',
+        'Google Maps',
+        'OneSignal'
+      ],
+      'category': 'Automotive',
+      'gradient': [0xFFFF6B6B, 0xFF7B2FBE],
+      'emoji': '🚨',
+      'github': '',
+      'live': '',
+      'featured': false,
+    },
+    {
+      'title': 'Sisko Comic',
+      'description':
+          'Social media app for the comic community with real-time Firebase chat, Superhero API integration, user profiles, posts, likes, and FCM push notifications for messages and content updates.',
+      'tech': ['Flutter', 'Firebase', 'Bloc/Cubit', 'REST API'],
       'category': 'Social',
-      'gradient': [0xFF7B2FBE, 0xFFFF6B6B],
-      'emoji': '💬',
-      'github': 'https://github.com/alexchen/chatsphere',
-      'live': 'https://chatsphere.io',
-      'featured': true,
-    },
-    {
-      'title': 'MediCare+',
-      'description':
-          'Healthcare companion app for appointment scheduling, medication reminders, health records management, and telemedicine integration.',
-      'tech': ['Flutter', 'Firebase', 'Riverpod', 'HealthKit'],
-      'category': 'Healthcare',
-      'gradient': [0xFFFF6B6B, 0xFFFF8E53],
-      'emoji': '🏥',
-      'github': 'https://github.com/alexchen/medicare',
-      'live': null,
-      'featured': false,
-    },
-    {
-      'title': 'ArtVault',
-      'description':
-          'NFT marketplace and digital art gallery with stunning animations, AR preview features, and seamless Web3 wallet integration.',
-      'tech': ['Flutter', 'Web3', 'IPFS', 'Ethereum'],
-      'category': 'Web3',
-      'gradient': [0xFFA259FF, 0xFF00D4FF],
-      'emoji': '🎨',
-      'github': 'https://github.com/alexchen/artvault',
-      'live': 'https://artvault.io',
-      'featured': false,
-    },
-    {
-      'title': 'FitQuest',
-      'description':
-          'Gamified fitness app with workout tracking, AI form correction via camera, social challenges, and achievement system.',
-      'tech': ['Flutter', 'TensorFlow Lite', 'Firebase', 'BLoC'],
-      'category': 'Health & Fitness',
-      'gradient': [0xFFFF6B35, 0xFFFFD700],
-      'emoji': '💪',
-      'github': 'https://github.com/alexchen/fitquest',
-      'live': 'https://fitquest.app',
+      'gradient': [0xFFA259FF, 0xFFFF6B6B],
+      'emoji': '🦸',
+      'github': '',
+      'live': 'https://insta-clone-flax-kappa.vercel.app/',
       'featured': false,
     },
   ];
 
   static const List<Map<String, dynamic>> experience = [
     {
-      'role': 'Senior Flutter Developer',
-      'company': 'TechVision Labs',
-      'period': '2022 – Present',
+      'role': 'Flutter Developer',
+      'company': 'Betasys AI Pvt Ltd',
+      'period': 'Apr 2025 – Present',
       'description':
-          'Led Flutter development for 3 flagship mobile apps with 500K+ combined downloads. Architected scalable solutions using Clean Architecture & Riverpod. Mentored a team of 4 junior developers.',
+          'Designing and developing cross-platform mobile apps for Android and iOS with a strong focus on scalability. Implementing Bloc Cubit and Riverpod for clean, modular architecture, integrating FCM push notifications, RESTful APIs, Firebase services, Google Maps SDK, and geofencing features.',
       'highlights': [
-        'Reduced app startup time by 40%',
-        '500K+ active users',
-        'Led team of 4 devs',
-        '99.9% crash-free sessions',
+        'Bloc Cubit & Riverpod architecture',
+        'FCM push notifications',
+        'Google Maps & Geofencing',
+        'RESTful API integration',
       ],
       'icon': '🚀',
     },
     {
       'role': 'Flutter Developer',
-      'company': 'StartupHub Inc.',
-      'period': '2021 – 2022',
+      'company': 'Technobase Solutions Pvt Ltd',
+      'period': 'Sep 2024 – Apr 2025',
       'description':
-          'Built cross-platform mobile applications from scratch using Flutter & Firebase. Implemented complex UI animations and integrated payment gateways, push notifications, and analytics.',
+          'Built cross-platform apps for Android and iOS. Migrated app to a refreshed UI theme, integrated Firebase Cloud Messaging, applied Bloc Cubit for clean architecture, and enhanced performance while collaborating with cross-functional teams.',
       'highlights': [
-        'Delivered 5 apps in 12 months',
-        'Stripe & PayPal integration',
-        'Custom animation system',
-        '4.8★ App Store rating',
+        'Full app UI migration & redesign',
+        'Bloc Cubit state management',
+        'Firebase FCM integration',
+        'Bug fixes & performance tuning',
       ],
       'icon': '⚡',
     },
     {
-      'role': 'Mobile Developer (Intern → Junior)',
-      'company': 'AppCraft Studio',
-      'period': '2019 – 2021',
+      'role': 'Flutter Developer',
+      'company': 'Thinkersteps Pvt. Ltd.',
+      'period': 'Feb 2024 – Sep 2024',
       'description':
-          'Started as an intern and grew to Junior Developer. Worked on both React Native and Flutter projects, gaining expertise in mobile app development patterns.',
+          'Designed and developed cross-platform Flutter apps, led a modern UI redesign/migration, implemented Firebase Cloud Messaging with BLoC Cubit architecture, optimized performance, and integrated RESTful APIs for real-time data interactions.',
       'highlights': [
-        'Promoted after 6 months',
-        'Migrated RN app to Flutter',
-        'Implemented CI/CD pipeline',
-        '2 published Play Store apps',
+        'Led full UI redesign & migration',
+        'BLoC Cubit architecture',
+        'RESTful API & Firebase integration',
+        'On-schedule quality releases',
       ],
       'icon': '🌱',
     },
   ];
 
   static const List<Map<String, dynamic>> stats = [
-    {'value': '4+', 'label': 'Years Experience', 'icon': '📅'},
-    {'value': '25+', 'label': 'Apps Shipped', 'icon': '📱'},
-    {'value': '500K+', 'label': 'App Users', 'icon': '👥'},
-    {'value': '15+', 'label': 'Open Source Repos', 'icon': '🐙'},
+    {'value': '2+', 'label': 'Years Experience', 'icon': '📅'},
+    {'value': '5+', 'label': 'Apps Shipped', 'icon': '📱'},
+    {'value': '2', 'label': 'Store Deployments', 'icon': '🏪'},
+    {'value': '3', 'label': 'Companies Worked', 'icon': '🏢'},
   ];
 }

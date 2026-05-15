@@ -106,7 +106,7 @@ class _NavBarState extends State<NavBar> {
             ),
             child: const Center(
               child: Text(
-                'AC',
+                'BW',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w700,
@@ -117,7 +117,7 @@ class _NavBarState extends State<NavBar> {
           ),
           const SizedBox(width: 12),
           Text(
-            'Alex Chen',
+            'Bharat Wakade',
             style: TextStyle(
               color: AppColors.textPrimary,
               fontWeight: FontWeight.w600,

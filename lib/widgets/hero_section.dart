@@ -296,8 +296,7 @@ class _HeroSectionState extends State<HeroSection>
     return ConstrainedBox(
       constraints: const BoxConstraints(maxWidth: 600),
       child: Text(
-        'I craft beautiful, performant cross-platform apps that users love. '
-        'Specializing in Flutter, Dart, and modern mobile architecture.',
+        PortfolioData.bio,
         textAlign: isMobile ? TextAlign.center : TextAlign.start,
         style: TextStyle(
           color: AppColors.textSecondary,

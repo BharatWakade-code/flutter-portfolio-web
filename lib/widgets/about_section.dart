@@ -97,7 +97,7 @@ class AboutSection extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
                     const Text(
-                      'Alex Chen',
+                      'Bharat Wakade',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -136,10 +136,10 @@ class AboutSection extends StatelessWidget {
           runSpacing: 12,
           alignment: WrapAlignment.center,
           children: [
-            _InfoChip(icon: '📍', label: 'San Francisco, CA'),
-            _InfoChip(icon: '🎓', label: 'CS Graduate'),
+            _InfoChip(icon: '📍', label: 'Nagpur, Maharashtra'),
+            _InfoChip(icon: '🎓', label: 'B.Tech Civil Engg.'),
             _InfoChip(icon: '💼', label: 'Open to Work'),
-            _InfoChip(icon: '🌐', label: 'Remote Friendly'),
+            _InfoChip(icon: '📱', label: 'Android & iOS'),
           ],
         ),
       ],

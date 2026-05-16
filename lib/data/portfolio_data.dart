@@ -94,6 +94,44 @@ class PortfolioData {
       'featured': true,
     },
     {
+      'title': 'Chia AI Stories',
+      'description':
+          'AI-powered storytelling app that generates immersive stories, scenes, and videos from user prompts. Features image generation, scene regeneration, auto-rotating fullscreen video playback, real-time processing updates, and optimized media streaming for a smooth creative experience.',
+      'tech': [
+        'Flutter',
+        'FastAPI',
+        'Bloc Cubit',
+        'AI Image Generation',
+        'Video Streaming',
+        'Firebase'
+      ],
+      'category': 'AI & Entertainment',
+      'gradient': [0xFF6A11CB, 0xFF2575FC],
+      'emoji': '🎬',
+      'github': '',
+      'live': '',
+      'featured': true,
+    },
+    {
+      'title': 'KrishiWings',
+      'description':
+          'Agriculture service platform connecting farmers with drone service providers for modern farming solutions. Farmers can search and book nearby providers, while providers can manage and offer their services efficiently. Integrated Google Maps for real-time location tracking and Google Places Autocomplete API for seamless location and service search experience.',
+      'tech': [
+        'Flutter',
+        'REST API',
+        'Bloc Cubit',
+        'Google Maps',
+        'Google Places API',
+        'Firebase'
+      ],
+      'category': 'AgriTech',
+      'gradient': [0xFF11998E, 0xFF38EF7D],
+      'emoji': '🚁',
+      'github': '',
+      'live': '',
+      'featured': true,
+    },
+    {
       'title': 'Petrolynk',
       'description':
           'Cross-platform app for fuel and grocery corporations with daily/monthly/yearly sales dashboards, barcode scanning for inventory, and an AI-powered chatbot over WebSocket for querying business insights.',
@@ -128,13 +166,7 @@ class PortfolioData {
       'title': 'MERSI',
       'description':
           'Emergency roadside assistance app for breakdowns and accidents. Integrates Google Maps to display nearby service centers, mechanics, and tow trucks, with OneSignal real-time notifications for service updates.',
-      'tech': [
-        'Flutter',
-        'REST API',
-        'Bloc Cubit',
-        'Google Maps',
-        'OneSignal'
-      ],
+      'tech': ['Flutter', 'REST API', 'Bloc Cubit', 'Google Maps', 'OneSignal'],
       'category': 'Automotive',
       'gradient': [0xFFFF6B6B, 0xFF7B2FBE],
       'emoji': '🚨',

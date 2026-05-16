@@ -115,7 +115,7 @@ class PortfolioData {
     {
       'title': 'KrishiWings',
       'description':
-          'Agriculture service platform connecting farmers with drone service providers for modern farming solutions. Farmers can search and book nearby providers, while providers can manage and offer their services efficiently. Integrated Google Maps for real-time location tracking and Google Places Autocomplete API for seamless location and service search experience.',
+          'AgriTech platform connecting farmers with equipment and service providers for modern farming solutions. Farmers can search, book, and track nearby providers, while providers can manage services, equipment, and customer requests efficiently. Integrated Google Maps for real-time location tracking and Google Places Autocomplete API for fast and accurate service discovery.',
       'tech': [
         'Flutter',
         'REST API',
@@ -126,7 +126,7 @@ class PortfolioData {
       ],
       'category': 'AgriTech',
       'gradient': [0xFF11998E, 0xFF38EF7D],
-      'emoji': '🚁',
+      'emoji': '🚜',
       'github': '',
       'live': '',
       'featured': true,
